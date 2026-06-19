@@ -2,6 +2,22 @@
 
 Running local coding models on an Apple Silicon **M4 Max (128GB)**, with each engine tuned for that machine. The scripts are Python (standard library only — no `pip install` needed) and still detect and print the host's capabilities on startup.
 
+## Prerequisites
+
+macOS on Apple Silicon. The launchers are Python but shell out to an inference engine — install the one(s) you need:
+
+| Tool | Used by | Install |
+|---|---|---|
+| **Python 3** | all scripts | preinstalled on macOS (`python3`) — stdlib only, no `pip install` for the launchers themselves |
+| **Homebrew** | installing `llama.cpp` / `jq` | https://brew.sh |
+| **llama-server** (llama.cpp) | qwen models — `servers/run-llama-server.py` | `brew install llama.cpp` |
+| **mlx_lm.server** (mlx-lm) | ling / gemma models — `servers/run-mlx-server.py` | currently a git fork — see [Running mlx_lm.server](#running-mlx_lmserver) |
+| **jq** | `tests/bench-mlx.sh` only | `brew install jq` |
+
+The launchers verify their engine is on `PATH` and print the install command if it's missing. 
+
+GGUF / MLX model weights are auto-downloaded from [HuggingFace](https://huggingface.co) on first run.
+
 ## Quick Start
 
 ```bash
