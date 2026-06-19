@@ -1,4 +1,4 @@
-# Vibe Coding - Local LLM Setup
+# Local LLM Setup
 
 Running local coding models on an Apple Silicon **M4 Max (128GB)**, with each engine tuned for that machine. The scripts are Python (standard library only — no `pip install` needed) and still detect and print the host's capabilities on startup.
 
