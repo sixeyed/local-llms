@@ -2,6 +2,8 @@
 
 Running local coding models on an Apple Silicon **M4 Max (128GB)**, with each engine tuned for that machine. The scripts are Python (standard library only — no `pip install` needed) and still detect and print the host's capabilities on startup.
 
+> See [Mac Studio: The Best Local LLM Workstation Money Can(‘t) Buy](https://blog.sixeyed.com/mac-studio-llm-workstation/)
+
 ## Prerequisites
 
 macOS on Apple Silicon. The launchers are Python but shell out to an inference engine — install the one(s) you need:
